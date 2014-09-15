@@ -1,0 +1,29 @@
+{
+  "name": "plunker-importer",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Geoffrey Goodman",
+  "license": "ISC",
+  "dependencies": {
+    "bluebird": "^2.3.2",
+    "elasticsearch": "^2.4.2",
+    "git-object-blob": "0.0.1",
+    "git-object-commit": "^1.0.0",
+    "git-object-hash": "0.0.8",
+    "git-object-tree": "0.0.5",
+    "googlediff": "^0.1.0",
+    "humanize-plus": "^1.5.0",
+    "level-hyper": "^0.18.0",
+    "lodash": "^2.4.1",
+    "mime": "^1.2.11",
+    "mongo-gyro": "^0.1.22",
+    "padded-semver": "^2.0.5",
+    "pull-stream": "^2.25.0",
+    "semver": "^3.0.1",
+    "single-line-log": "^0.4.1"
+  }
+}
