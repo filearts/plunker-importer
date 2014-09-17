@@ -9,6 +9,7 @@
   "author": "Geoffrey Goodman",
   "license": "ISC",
   "dependencies": {
+    "bloomfilter": "0.0.14",
     "bluebird": "^2.3.2",
     "elasticsearch": "^2.4.2",
     "git-object-blob": "0.0.1",
@@ -19,6 +20,7 @@
     "humanize-plus": "^1.5.0",
     "level-hyper": "^0.18.0",
     "lodash": "^2.4.1",
+    "memwatch": "^0.2.2",
     "mime": "^1.2.11",
     "mongo-gyro": "^0.1.22",
     "padded-semver": "^2.0.5",

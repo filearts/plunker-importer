@@ -214,7 +214,7 @@ internals.parsePlunk = function (oldPlunk) {
 
   // Define the plunk
   var plunk = {
-    _id: oldPlunk._id,
+    id: oldPlunk._id,
     fork_of: oldPlunk.fork_of || null,
     title: oldPlunk.description,
     readme: "",
@@ -260,7 +260,7 @@ internals.savePlunk = function (plunk, cb) {
     .then(function () {
       cb(null, 1);
       
-      return es.index({index: "plunker", type: "plunk", id: plunk._id, body: plunk});
+      return es.index({index: "plunker", type: "plunk", id: plunk.id, body: plunk});
     }, function (err) {
       cb(err);
     });
@@ -271,7 +271,7 @@ internals.savePlunks = function (plunks, cb) {
   var updated_at = 0;
   
   _.forEach(plunks, function (plunk) {
-    body.push({index: {_index: "plunker", _type: "plunk", _id: plunk._id}});
+    body.push({index: {_index: "plunker", _type: "plunk", _id: plunk.id}});
     body.push(plunk);
     
     updated_at = Math.max(new Date(plunk.updated_at).valueOf(), updated_at);
@@ -376,7 +376,7 @@ es.indices.exists({index: "plunker"})
             Pull(
               internals.pullMongo(cursor),
               Pull.map(function (plunk) {
-                lastPlunk = plunk._id;
+                lastPlunk = plunk.id;
                 
                 return plunk;
               }),
