@@ -336,12 +336,22 @@ es.indices.exists({index: "plunker"})
         },
         mappings: {
           plunk: {
+            _id: {
+              path: "id",
+            },
             properties: {
               'collections': { type: "string", index: "not_analyzed"},
+              'queued': { type: "string", index: "not_analyzed"},
               'tags': { type: "string", analyzer: "analyzer_keyword"},
               'packages.name': { type: "string", analyzer: "analyzer_keyword"},
               'packages.semver': { type: "string", analyzer: "analyzer_keyword"},
               'packages.semverRange': { type: "string", analyzer: "analyzer_keyword"},
+              'user_id': { type: "string", index: "not_analyzed"},
+              'id': { type: "string", index: "not_analyzed"},
+              'fork_of': { type: "string", index: "not_analyzed"},
+              'session_id': { type: "string", index: "not_analyzed"},
+              'commit_sha': { type: "string", index: "not_analyzed"},
+              'tree_sha': { type: "string", index: "not_analyzed"},
             },
           },
         }
